@@ -16,6 +16,22 @@ public class User {
     @Column
     private int age;
 
+    public User() {}
+    public User(String fName, String lName, String profession, int age) {
+        this.first_name = fName;
+        this.last_name = lName;
+        this.profession = profession;
+        this.age = age;
+    }
+
+    public User(long id, String fName, String lName, String profession, int age) {
+        this.id = id;
+        this.first_name = fName;
+        this.last_name = lName;
+        this.profession = profession;
+        this.age = age;
+    }
+
     public long getId() {
         return id;
     }
