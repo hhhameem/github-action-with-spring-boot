@@ -1,5 +1,8 @@
 package com.crud.app.rest.Models;
 
+import com.sun.istack.NotNull;
+import org.springframework.lang.NonNull;
+
 import javax.persistence.*;
 
 @Entity
@@ -7,6 +10,8 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+    @Column(unique = true)
+    private String email;
     @Column
     private String first_name;
     @Column
@@ -17,15 +22,26 @@ public class User {
     private int age;
 
     public User() {}
-    public User(String fName, String lName, String profession, int age) {
+
+//    public User(String email, String fName, String lName, String profession, int age) {
+//        this.email = email;
+//        this.first_name = fName;
+//        this.last_name = lName;
+//        this.profession = profession;
+//        this.age = age;
+//    }
+
+    public User(long id, String fName, String lName, String profession, int age) {
+        this.id = id;
         this.first_name = fName;
         this.last_name = lName;
         this.profession = profession;
         this.age = age;
     }
 
-    public User(long id, String fName, String lName, String profession, int age) {
+    public User(long id, String email, String fName, String lName, String profession, int age) {
         this.id = id;
+        this.email = email;
         this.first_name = fName;
         this.last_name = lName;
         this.profession = profession;
@@ -38,6 +54,14 @@ public class User {
 
     public void setId(long id) {
         this.id = id;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getFirst_name() {
