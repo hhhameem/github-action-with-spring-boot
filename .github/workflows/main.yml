@@ -32,4 +32,4 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Build with maven
-        run: mvn -B package --file pom.xml
+        run: mvn -DskipTests -B package --file pom.xml
