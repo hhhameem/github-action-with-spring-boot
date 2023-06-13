@@ -50,7 +50,6 @@ class RestApiApplicationTests {
 	private final String UPDATE_USER = "/user/update/1";
 	private final String DELETE_USER = "/user/delete/2";
 
-
 	@Test()
 	@Order(1)
 	void getUserList() throws Exception {
@@ -69,7 +68,7 @@ class RestApiApplicationTests {
 		int status = mvcResult.getResponse().getStatus();
 //		String body = mvcResult.getResponse().getContentAsString();
 //		System.out.println("Statussssss "+ objectMapper.readValue(body, new TypeReference<List<User>>(){}).get(1).getFirst_name());
-		assertEquals(400, status);
+		assertEquals(200, status);
 	}
 
 	@Test()
