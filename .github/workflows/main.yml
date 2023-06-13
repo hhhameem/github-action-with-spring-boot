@@ -38,4 +38,6 @@ jobs:
         uses: actions/upload-artifact@v3.1.2
         with:
           name: crud.war
-          path: ./target/*crud*.war
+          path: ./target/
+      - name: Group of log lines
+        run: echo pwd
