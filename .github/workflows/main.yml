@@ -40,4 +40,6 @@ jobs:
           name: crud.war
           path: ./target/
       - name: Group of log lines
-        run: echo pwd
+        run: |
+          cd ./target
+          echo ls
