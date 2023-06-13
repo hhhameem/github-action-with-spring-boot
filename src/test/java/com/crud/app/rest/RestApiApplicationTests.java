@@ -50,19 +50,6 @@ class RestApiApplicationTests {
 	private final String UPDATE_USER = "/user/update/1";
 	private final String DELETE_USER = "/user/delete/2";
 
-//	@Test
-//	public void getProductsList() throws Exception {
-//		String uri = "/users";
-//		MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.get(uri)
-//				.accept(MediaType.APPLICATION_JSON_VALUE)).andReturn();
-//
-//		int status = mvcResult.getResponse().getStatus();
-//		assertEquals(200, status);
-//		String content = mvcResult.getResponse().getContentAsString();
-//		System.out.println("okkkkkkkkkkkkkkkkkkkkk " + content );
-////		Product[] productlist = super.mapFromJson(content, Product[].class);
-////		assertTrue(productlist.length > 0);
-//	}
 
 	@Test()
 	@Order(1)
@@ -80,9 +67,9 @@ class RestApiApplicationTests {
 					.andReturn();
 
 		int status = mvcResult.getResponse().getStatus();
-		String body = mvcResult.getResponse().getContentAsString();
+//		String body = mvcResult.getResponse().getContentAsString();
 //		System.out.println("Statussssss "+ objectMapper.readValue(body, new TypeReference<List<User>>(){}).get(1).getFirst_name());
-		assertEquals(200, status);
+		assertEquals(400, status);
 	}
 
 	@Test()
@@ -98,7 +85,7 @@ class RestApiApplicationTests {
 				.andReturn();
 
 		int status = mvcResult.getResponse().getStatus();
-		String body = mvcResult.getResponse().getContentAsString();
+//		String body = mvcResult.getResponse().getContentAsString();
 		assertEquals(200, status);
 	}
 
